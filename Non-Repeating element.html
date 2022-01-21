@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Non-repeated Elemet</title>
+    </head>
+    <body>
+        <h1>Get The Non-Repeated Elemet</h1>
+        <p>Given an array where elements are repeated at least twice,
+        there is only one element that is not repeated. Get the non-repeated element</p>
+    
+        <script>
+            
+            function getNonRepeatedElement(array) {
+                for (var i = 0; i < array.length; i++) {
+                    for (var j = 0; j < array.length; j++)
+                        if (i != j && array[i] == array[j])
+                            break;
+                    if (j == array.length)
+                        return array[i];
+                }
+                return "all numbers are dublicated";
+            }
+    
+        
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 8, 7, 6, 4, 3, 2, 1];
+            alert(getNonRepeatedElement(arr));
+
+        </script>
+        
+
+    
+    </body>
+            
+        
+</html>

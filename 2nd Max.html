@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2nd maximum</title>
+</head>
+
+<body>
+    <h1>Get the 2nd maximum in an array of integers</h1>
+    <p>Given an array of integers, get the 2nd maximum of the array</p>
+
+    <script>
+        function get2ndmaximum(array) {
+            var max = array[0];
+            var secondMax = array[0];
+
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] > max) {
+                    secondMax = max;
+                    max = array[i]
+                }
+                if (array[i] < max && array[i] > secondMax) {
+                    secondMax = array[i]
+                }
+            }
+
+            return secondMax
+
+        }
+
+
+        var arr = [14, 40, 9, 300, 211, 85, 60];
+        alert(get2ndmaximum(arr));
+    </script>
+</body>
+
+
+</html>

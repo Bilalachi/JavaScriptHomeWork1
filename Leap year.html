@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leap Year</title>
+</head>
+
+<body>
+    <h1>We are going to check if a given year is a leap year or not</h1>
+    <p>A leap year is a year, occurring once every four years,
+        which has 366 days including 29 February as an intercalary day</p><br/>
+    <p>A year is a leap year if the following conditions are satisfied: </p>
+    <ul>
+        <li>The year is multiple of 400.</li>
+        <li>The year is multiple of 4 and not multiple of 100.</li>
+    </ul>
+
+    <script>
+        function checkIfLeapYear(year) {
+            if ((year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0)) {
+                console.log(year + " is a leap year");
+            } else {
+                console.log(year + " is not a leap year");
+            }
+        }
+        var year = prompt("Enter a year:");
+        checkIfLeapYear(year);
+    </script>
+</body>
+
+</html>
